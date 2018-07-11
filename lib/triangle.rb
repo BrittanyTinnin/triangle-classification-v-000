@@ -20,6 +20,7 @@ class Triangle
   def true_triangle
     a_triangle = [(a+b>c), (a+c>b), (b+c>a)]
     [a,b,c].each {|s| a_triangle unless s <= 0}
+    raise TriangleError if a_triangle == false
   end
 
 
