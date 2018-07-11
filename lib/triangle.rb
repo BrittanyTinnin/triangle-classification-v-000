@@ -19,9 +19,9 @@ class Triangle
   end
 
   def true_triangle
-    a_triangle = [(a+b>c), (a+c>b), (b+c>a)]
-    [a,b,c].each {|s| a_triangle unless s <= 0}
-    raise TriangleError if a_triangle == false
+    real_triangle = [(a + b > c), (a + c > b), (b + c > a)]
+    [a, b, c].each { |s| real_triangle << false if s <= 0 }
+    raise TriangleError if real_triangle.include?(false)
   end
 
 
