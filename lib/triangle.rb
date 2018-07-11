@@ -22,7 +22,7 @@ class Triangle
     [a,b,c].each {|s| a_triangle unless s <= 0}
   end
 
-  
+
   class TriangleError < StandardError
 
   end
